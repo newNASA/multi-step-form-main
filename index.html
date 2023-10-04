@@ -19,10 +19,13 @@
 <body>
 
   <div class="container">
+
+    <!-- Container left  -->
+
     <div class="left">
       <div class="step step-1">
         <div class="step__left">
-          <div><p>1</p></div>
+          <div class="step__one_div"><p>1</p></div>
         </div>
         <div class="step__right">
           <h3>YOUR INFO</h3>
@@ -30,7 +33,7 @@
       </div>
       <div class="step step-2">
         <div class="step__left">
-          <div><p>2</p></div>
+          <div class="step__two_div"><p>2</p></div>
         </div>
         <div class="step__right">
           <h3>SELECT PLAN</h3>
@@ -53,21 +56,64 @@
         </div>
       </div>
     </div>
+
+    <!-- Container left end -->
+
+    <!-- Conatainer right  -->
+
     <div class="right">
-      <div class="right-card">
+
+      <!-- Step-1 Your Info page -->
+
+      <div class="your__info__page">
         <h1>Personal info</h1>
         <p>Please provide your name, email address, and phone number.</p>
         <form action="">
-          <label for="name">Name</label>
-          <input type="text" class="name" id="name" placeholder="e.g. Stephen King">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="e.g. stephenking@lorem.com">
-          <label for="phone">Phone Number</label>
-          <input type="text" placeholder="e.g. +1 234 567 890" id="phone">
+          <div>
+            <label for="name">Name</label>
+            <span class="span">This field is required</span>
+          </div>
+          <input type="text" class="step-one-input name" id="name" placeholder="e.g. Stephen King">
+          <div>
+            <label for="email">Email Address</label>
+            <span class="span">This field is required</span>
+          </div>
+          <input type="email" class="step-one-input" id="email" placeholder="e.g. stephenking@lorem.com">
+          <div>
+            <label for="phone">Phone Number</label>
+            <span class="span">This field is required</span>
+          </div>
+          <input type="text" class="step-one-input" placeholder="e.g. +1 234 567 890" id="phone">
+          <input type="button" value="Next Step" class="your__info">
         </form>
-        <button class="your__info">Next Step</button>
       </div>
+
+      <!-- Step-1 Your info page end -->
+
+      <!-- Step-2 Select plan page -->
+
+      <div class="select__plan__page">
+
+        <h1>Select your plan</h1>
+        <p>You have the option of monthly or yearly billing.</p>
+        <div class="choices">
+          <div class="top">
+            <div class="card one">
+              <img src="./assets/images/icon-arcade.svg" alt="">
+            </div>
+            <div class="card two"></div>
+            <div class="card three"></div>
+          </div>
+          <div class="bottom"></div>
+        </div>
+
+      </div>
+
+      <!-- Step-2 Select plan page end -->
+
     </div>
+
+    <!-- Container right end -->
   </div>
 
   <!-- Step 2 start -->
@@ -137,6 +183,8 @@
   to email us at support@loremgaming.com. -->
 
   <!-- Step 5 end -->
+
+  <script src="script.js"></script>
 
 </body>
 

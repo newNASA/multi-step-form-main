@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
+  border: 1px solid red;
 }
 
 :root {
@@ -13,6 +14,9 @@
   --text-color:hsl(231, 11%, 63%);
   --input-border:hsl(229, 24%, 87%);
   --button-hover:hsl(243, 100%, 62%);
+  --error:hsl(354, 84%, 57%);
+  --magnolia:hsl(217, 100%, 97%);
+  --alebaster: hsl(231, 100%, 99%);
 }
 
 body {
@@ -32,7 +36,7 @@ body {
 }
 .container .left {
   padding: 40px;
-  width: 325px;
+  width: 35%;
   height: 568px;
   background-image: url(./assets/images/bg-sidebar-desktop.svg);
   background-repeat: no-repeat;
@@ -54,6 +58,12 @@ body {
 }
 .container .left .step .step__left div p {
   color: var(--white);
+}
+.container .left .step .step__left .step__one_div {
+  background-color: var(--light-blue);
+}
+.container .left .step .step__left .step__one_div p {
+  color: var(--button-hover);
 }
 .container .left .step .step__right h3 {
   color: var(--white);
@@ -81,42 +91,58 @@ body {
   content: "STEP_4";
 }
 .container .right {
-  overflow: hidden;
+  width: 65%;
   margin: 40px 100px;
 }
 .container .right h1 {
   font-weight: 400;
   color: var(--title-color);
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .container .right p {
   color: var(--text-color);
   font-weight: 400;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
-.container .right label, .container .right input {
+.container .right .your__info__page {
+  display: none;
+}
+.container .right .your__info__page label, .container .right .your__info__page input {
   display: block;
 }
-.container .right label {
+.container .right .your__info__page label {
   color: var(--title-color);
   font-size: 14px;
-  margin-top: 25px;
   margin-bottom: 5px;
+  display: inline-block;
 }
-.container .right input {
+.container .right .your__info__page .step-one-input {
   padding: 15px;
   border-radius: 5px;
   outline: none;
   border: 1px solid var(--input-border);
   width: 455px;
 }
-.container .right input::-moz-placeholder {
+.container .right .your__info__page .step-one-input::-moz-placeholder {
   color: var(--text-color);
 }
-.container .right input::placeholder {
+.container .right .your__info__page .step-one-input::placeholder {
   color: var(--text-color);
 }
-.container .right .your__info {
+.container .right .your__info__page .step-one-input:focus {
+  border: 1px solid black;
+}
+.container .right .your__info__page form div {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .right .your__info__page form span {
+  font-size: 14px;
+  color: var(--error);
+  display: none;
+}
+.container .right .your__info__page .your__info {
   padding: 15px;
   background-color: var(--title-color);
   outline: none;
@@ -129,6 +155,15 @@ body {
   margin-top: 60px;
   cursor: pointer;
 }
-.container .right .your__info:hover {
+.container .right .your__info__page .your__info:hover {
   background-color: var(--button-hover);
+}
+.container .right .select__plan_page {
+  width: 100%;
+}
+.container .right .select__plan_page .choices .top {
+  display: flex;
+}
+.container .right .select__plan_page .choices .top .card {
+  width: 133px;
 }/*# sourceMappingURL=style.css.map */

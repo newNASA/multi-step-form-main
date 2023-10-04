@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
-    // border: 1px solid red;
+    border: 1px solid red;
 }
 
 :root{
@@ -14,6 +14,9 @@
     --text-color:hsl(231, 11%, 63%);
     --input-border:hsl(229, 24%, 87%);
     --button-hover:hsl(243, 100%, 62%);
+    --error:hsl(354, 84%, 57%);
+    --magnolia:hsl(217, 100%, 97%);
+    --alebaster: hsl(231, 100%, 99%);
 }
 
 body{
@@ -32,7 +35,7 @@ body{
     display: flex;
     .left{
         padding:40px;
-        width: 325px;
+        width: 35%;
         height: 568px;
         background-image: url(./assets/images/bg-sidebar-desktop.svg);
         background-repeat: no-repeat;
@@ -52,6 +55,12 @@ body{
                     place-items: center;
                     p{
                         color: var(--white);
+                    }
+                }
+                .step__one_div{
+                    background-color: var(--light-blue);
+                    p{
+                        color: var(--button-hover);
                     }
                 }
             }
@@ -104,51 +113,82 @@ body{
     }
 
     .right{
-        overflow: hidden;
+        width: 65%;
         margin: 40px 100px;
+
         h1{
             font-weight: 400;
             color: var(--title-color);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         p{
             color: var(--text-color);
             font-weight: 400;
-            margin-bottom: 50px;
+            margin-bottom: 35px;
         }
-        label,input{
-            display: block;
-        }
-        label{
-            color: var(--title-color);
-            font-size: 14px;
-            margin-top: 25px;
-            margin-bottom: 5px;
-        }
-        input{
-            padding: 15px;
-            border-radius: 5px;
-            outline: none;
-            border: 1px solid var(--input-border);
-            width: 455px;
-            &::placeholder{
-                color: var(--text-color);
+        .your__info__page{
+            display: none;
+            label,input{
+                display: block;
+            }
+            label{
+                color: var(--title-color);
+                font-size: 14px;
+                margin-bottom: 5px;
+                display: inline-block;
+            }
+            .step-one-input{
+                padding: 15px;
+                border-radius: 5px;
+                outline: none;
+                border: 1px solid var(--input-border);
+                width: 455px;
+                &::placeholder{
+                    color: var(--text-color);
+                }
+                &:focus{
+                    border: 1px solid black;
+                }
+            }
+            form{
+                div{
+                    margin-top: 25px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+                span{
+                    font-size: 14px;
+                    color: var(--error);
+                    display: none;
+                }
+            }
+            .your__info{
+                padding: 15px;
+                background-color: var(--title-color);
+                outline: none;
+                border-radius: 5px;
+                color: var(--white);
+                border: transparent;
+                letter-spacing: 2px;
+                font-weight: 600;
+                float: right;
+                margin-top: 60px;
+                cursor: pointer;
+                &:hover{
+                    background-color: var(--button-hover);
+                }
             }
         }
-        .your__info{
-            padding: 15px;
-            background-color: var(--title-color);
-            outline: none;
-            border-radius: 5px;
-            color: var(--white);
-            border: transparent;
-            letter-spacing: 2px;
-            font-weight: 600;
-            float: right;
-            margin-top: 60px;
-            cursor: pointer;
-            &:hover{
-                background-color: var(--button-hover);
+
+        .select__plan_page{
+            width: 100%;
+            .choices{
+                .top{
+                    display: flex;
+                    .card{
+                        width: 133px;
+                    }
+                }
             }
         }
     }
