@@ -3,7 +3,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
-  border: 1px solid red;
 }
 
 :root {
@@ -17,6 +16,7 @@
   --error:hsl(354, 84%, 57%);
   --magnolia:hsl(217, 100%, 97%);
   --alebaster: hsl(231, 100%, 99%);
+  --light-gray:hsl(229, 24%, 87%);
 }
 
 body {
@@ -94,18 +94,18 @@ body {
   width: 65%;
   margin: 40px 100px;
 }
-.container .right h1 {
+.container .right .your__info__page {
+  display: none;
+}
+.container .right .your__info__page h1 {
   font-weight: 400;
   color: var(--title-color);
   margin-bottom: 20px;
 }
-.container .right p {
+.container .right .your__info__page p {
   color: var(--text-color);
   font-weight: 400;
   margin-bottom: 35px;
-}
-.container .right .your__info__page {
-  display: none;
 }
 .container .right .your__info__page label, .container .right .your__info__page input {
   display: block;
@@ -158,12 +158,109 @@ body {
 .container .right .your__info__page .your__info:hover {
   background-color: var(--button-hover);
 }
-.container .right .select__plan_page {
+.container .right .select__plan__page {
   width: 100%;
 }
-.container .right .select__plan_page .choices .top {
-  display: flex;
+.container .right .select__plan__page h1 {
+  font-weight: 400;
+  color: var(--title-color);
+  margin-bottom: 20px;
 }
-.container .right .select__plan_page .choices .top .card {
-  width: 133px;
+.container .right .select__plan__page p {
+  color: var(--text-color);
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+.container .right .select__plan__page .choices .top {
+  display: flex;
+  justify-content: space-between;
+}
+.container .right .select__plan__page .choices .top .card {
+  width: 160px;
+  border: 1px solid var(--light-gray);
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.container .right .select__plan__page .choices .top .card img {
+  margin-bottom: 35px;
+}
+.container .right .select__plan__page .choices .top .card h2 {
+  font-size: 1.1rem;
+  color: var(--title-color);
+}
+.container .right .select__plan__page .choices .top .card p {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.container .right .select__plan__page .choices .top .card span {
+  color: var(--title-color);
+  font-size: 14px;
+}
+.container .right .select__plan__page .choices .top .card:hover {
+  border: 1px solid var(--button-hover);
+}
+.container .right .select__plan__page .choices .bottom {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 25px;
+  background-color: var(--magnolia);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.container .right .select__plan__page .choices .bottom i {
+  font-size: 14px;
+  color: var(--text-color);
+  font-style: normal;
+}
+.container .right .select__plan__page .choices .bottom label {
+  width: 50px;
+  height: 25px;
+  border-radius: 50pc;
+  background-color: var(--title-color);
+  display: flex;
+  justify-content: start;
+  padding: 3px;
+  align-items: center;
+}
+.container .right .select__plan__page .choices .bottom label::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: block;
+  background-color: var(--white);
+}
+.container .right .select__plan__page .choices footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+.container .right .select__plan__page .choices footer .go__your_info {
+  color: var(--text-color);
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+  border: transparent;
+}
+.container .right .select__plan__page .choices footer .select__plan {
+  padding: 15px;
+  background-color: var(--title-color);
+  outline: none;
+  border-radius: 5px;
+  color: var(--white);
+  border: transparent;
+  letter-spacing: 2px;
+  font-weight: 600;
+  float: right;
+  cursor: pointer;
+}
+.container .right .select__plan__page .choices footer .select__plan:hover {
+  background-color: var(--button-hover);
 }/*# sourceMappingURL=style.css.map */
