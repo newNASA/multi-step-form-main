@@ -118,6 +118,7 @@ body{
         margin: 40px 100px;
 
         .your__info__page{
+            display: none;
             h1{
                 font-weight: 400;
                 color: var(--title-color);
@@ -293,6 +294,79 @@ body{
                         &:hover{
                             background-color: var(--button-hover);
                         }
+                    }
+                }
+            }
+        }
+        .add__ons__page{
+            h1{
+                font-weight: 400;
+                color: var(--title-color);
+                margin-bottom: 20px;
+            }
+            p{
+                color: var(--text-color);
+                font-weight: 400;
+                margin-bottom: 35px;
+            }
+            .setting{
+                padding: 25px;
+                border-radius: 10px;
+                border: 1px solid var(--light-gray);
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                transition: .5s;
+                input{
+                    width: 20px;
+                    height: 20px;
+                    accent-color: var(--button-hover);
+                }
+                div{
+                    margin-left: 25px;
+                    p{
+                        color: var(--title-color);
+                        margin: 0;
+                    }
+                    span{
+                        font-size: 14px;
+                        color: var(--text-color);
+                    }
+                }
+                &:hover{
+                    border: 1px solid var(--button-hover);
+                }
+            }
+            footer{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 30px;
+                .go__select_plan{
+                    color: var(--text-color);
+                    outline: none;
+                    font-size: 16px;
+                    background-color: transparent;
+                    border: transparent;
+                    cursor: pointer;
+                    transition: .5s;
+                    &:hover{
+                        color: var(--title-color);
+                    }
+                }
+                .add__ons{
+                    padding: 15px;
+                    background-color: var(--title-color);
+                    outline: none;
+                    border-radius: 5px;
+                    color: var(--white);
+                    border: transparent;
+                    letter-spacing: 2px;
+                    font-weight: 600;
+                    float: right;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: var(--button-hover);
                     }
                 }
             }

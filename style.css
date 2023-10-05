@@ -94,6 +94,9 @@ body {
   width: 65%;
   margin: 40px 100px;
 }
+.container .right .your__info__page {
+  display: none;
+}
 .container .right .your__info__page h1 {
   font-weight: 400;
   color: var(--title-color);
@@ -268,5 +271,76 @@ body {
   cursor: pointer;
 }
 .container .right .select__plan__page .choices footer .select__plan:hover {
+  background-color: var(--button-hover);
+}
+.container .right .add__ons__page h1 {
+  font-weight: 400;
+  color: var(--title-color);
+  margin-bottom: 20px;
+}
+.container .right .add__ons__page p {
+  color: var(--text-color);
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+.container .right .add__ons__page .setting {
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid var(--light-gray);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+.container .right .add__ons__page .setting input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--button-hover);
+}
+.container .right .add__ons__page .setting div {
+  margin-left: 25px;
+}
+.container .right .add__ons__page .setting div p {
+  color: var(--title-color);
+  margin: 0;
+}
+.container .right .add__ons__page .setting div span {
+  font-size: 14px;
+  color: var(--text-color);
+}
+.container .right .add__ons__page .setting:hover {
+  border: 1px solid var(--button-hover);
+}
+.container .right .add__ons__page footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.container .right .add__ons__page footer .go__select_plan {
+  color: var(--text-color);
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.container .right .add__ons__page footer .go__select_plan:hover {
+  color: var(--title-color);
+}
+.container .right .add__ons__page footer .add__ons {
+  padding: 15px;
+  background-color: var(--title-color);
+  outline: none;
+  border-radius: 5px;
+  color: var(--white);
+  border: transparent;
+  letter-spacing: 2px;
+  font-weight: 600;
+  float: right;
+  cursor: pointer;
+}
+.container .right .add__ons__page footer .add__ons:hover {
   background-color: var(--button-hover);
 }/*# sourceMappingURL=style.css.map */
