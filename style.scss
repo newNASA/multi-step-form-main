@@ -118,7 +118,7 @@ body{
         margin: 40px 100px;
 
         .your__info__page{
-            display: none;
+            // display: none;
             h1{
                 font-weight: 400;
                 color: var(--title-color);
@@ -299,6 +299,7 @@ body{
             }
         }
         .add__ons__page{
+            display: none;
             h1{
                 font-weight: 400;
                 color: var(--title-color);
