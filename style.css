@@ -94,9 +94,6 @@ body {
   width: 65%;
   margin: 40px 100px;
 }
-.container .right .your__info__page {
-  display: none;
-}
 .container .right .your__info__page h1 {
   font-weight: 400;
   color: var(--title-color);
@@ -121,7 +118,7 @@ body {
   border-radius: 5px;
   outline: none;
   border: 1px solid var(--input-border);
-  width: 455px;
+  width: 100%;
 }
 .container .right .your__info__page .step-one-input::-moz-placeholder {
   color: var(--text-color);
@@ -152,7 +149,7 @@ body {
   letter-spacing: 2px;
   font-weight: 600;
   float: right;
-  margin-top: 60px;
+  margin-top: 75px;
   cursor: pointer;
 }
 .container .right .your__info__page .your__info:hover {
@@ -160,6 +157,7 @@ body {
 }
 .container .right .select__plan__page {
   width: 100%;
+  display: none;
 }
 .container .right .select__plan__page h1 {
   font-weight: 400;
@@ -181,6 +179,7 @@ body {
   padding: 15px;
   border-radius: 10px;
   transition: 0.3s;
+  cursor: pointer;
 }
 .container .right .select__plan__page .choices .top .card img {
   margin-bottom: 35px;
@@ -196,6 +195,7 @@ body {
   font-size: 14px;
 }
 .container .right .select__plan__page .choices .top .card span {
+  display: none;
   color: var(--title-color);
   font-size: 14px;
 }
@@ -206,7 +206,7 @@ body {
   width: 100%;
   height: 50px;
   border-radius: 10px;
-  margin-top: 25px;
+  margin-top: 40px;
   background-color: var(--magnolia);
   display: flex;
   align-items: center;
@@ -227,6 +227,7 @@ body {
   justify-content: start;
   padding: 3px;
   align-items: center;
+  transition: 0.3s;
 }
 .container .right .select__plan__page .choices .bottom label::after {
   content: "";
@@ -248,6 +249,11 @@ body {
   font-size: 16px;
   background-color: transparent;
   border: transparent;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.container .right .select__plan__page .choices footer .go__your_info:hover {
+  color: var(--title-color);
 }
 .container .right .select__plan__page .choices footer .select__plan {
   padding: 15px;
