@@ -94,9 +94,6 @@ body {
   width: 65%;
   margin: 40px 100px;
 }
-.container .right .your__info__page {
-  display: none;
-}
 .container .right .your__info__page h1 {
   font-weight: 400;
   color: var(--title-color);
@@ -273,6 +270,9 @@ body {
 .container .right .select__plan__page .choices footer .select__plan:hover {
   background-color: var(--button-hover);
 }
+.container .right .add__ons__page {
+  display: none;
+}
 .container .right .add__ons__page h1 {
   font-weight: 400;
   color: var(--title-color);
@@ -290,7 +290,8 @@ body {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  transition: 0.5s;
+  transition: 0.3s;
+  cursor: pointer;
 }
 .container .right .add__ons__page .setting input {
   width: 20px;
@@ -307,6 +308,12 @@ body {
 .container .right .add__ons__page .setting div span {
   font-size: 14px;
   color: var(--text-color);
+}
+.container .right .add__ons__page .setting h4 {
+  font-size: 1rem;
+  color: var(--button-hover);
+  font-weight: normal;
+  margin-left: auto;
 }
 .container .right .add__ons__page .setting:hover {
   border: 1px solid var(--button-hover);

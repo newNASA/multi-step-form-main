@@ -41,7 +41,7 @@
       </div>
       <div class="step step-3">
         <div class="step__left">
-          <div><p>3</p></div>
+          <div class="step__three_div"><p>3</p></div>
         </div>
         <div class="step__right">
           <h3>ADD-ONS</h3>
@@ -49,7 +49,7 @@
       </div>
       <div class="step step-4">
         <div class="step__left">
-          <div><p>4</p></div>
+          <div class="step__four_div"><p>4</p></div>
         </div>
         <div class="step__right">
           <h3>SUMMARY</h3>
@@ -101,19 +101,19 @@
             <div class="card one">
               <img src="./assets/images/icon-arcade.svg" alt="">
               <h2>Arcade</h2>
-              <p>$9/mo</p>
+              <p class="arcade-price">$9/mo</p>
               <span class="checkout">2 months free</span>
             </div>
             <div class="card two">
               <img src="./assets/images/icon-advanced.svg" alt="">
               <h2>Advanced</h2>
-              <p>$12/mo</p>
+              <p class="advanced-price">$12/mo</p>
               <span class="checkout">2 months free</span>
             </div>
             <div class="card three">
               <img src="./assets/images/icon-pro.svg" alt="">
               <h2>Pro</h2>
-              <p>$15/mo</p>
+              <p class="pro-price">$15/mo</p>
               <span class="checkout">2 months free</span>
             </div>
           </div>
@@ -137,26 +137,29 @@
       <div class="add__ons__page">
         <h1>Pick add-ons</h1>
         <p>Add-ons help enhance your gaming experience.</p>
-        <div class="setting one">
-          <input type="checkbox">
+        <div class="setting setting_one">
+          <input type="checkbox" class="online_service">
           <div>
             <p>Online service</p>
             <span>Access to multiplayer games</span>
           </div>
+          <h4 class="online_service_h4">+$1/mo</h4>
         </div>
-        <div class="setting two">
-          <input type="checkbox">
+        <div class="setting setting_two">
+          <input type="checkbox" class="larger_storage">
           <div>
             <p>Larger storage</p>
             <span>Extra 1TB of cloud save</span>
           </div>
+          <h4 class="larger_storage_h4">+$2/mo</h4>
         </div>
-        <div class="setting three">
-          <input type="checkbox">
+        <div class="setting setting_three">
+          <input type="checkbox" class="custom_pro">
           <div>
             <p>Customizable Profile</p>
             <span>Custom theme on your profile</span>
           </div>
+          <h4 class="custom_pro_h4">+$2/mo</h4>
         </div>
         <footer>
           <input type="button" value="Go Back" class="go__select_plan">
