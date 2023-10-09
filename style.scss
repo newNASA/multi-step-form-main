@@ -379,5 +379,112 @@ body{
                 }
             }
         }
+        .summary__page{
+            display: none;
+            h1{
+                font-weight: 400;
+                color: var(--title-color);
+                margin-bottom: 20px;
+            }
+            .text{
+                color: var(--text-color);
+                font-weight: 400;
+                margin-bottom: 35px;
+            }
+            .summary_center{
+                padding: 20px;
+                background-color: var(--bg-color);
+                border-radius: 10px;
+                .top{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    h4{
+                        color: var(--title-color);
+                        font-size: 1.2rem;  
+                        font-weight: normal;       
+                        margin-bottom: 5px;
+                    }
+                    a{
+                        color: var(--text-color);
+                        &:hover{
+                            color: var(--button-hover);
+                        }
+                    }
+                    p{
+                        color: var(--title-color);
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                    }
+                }
+                hr{
+                    margin-top: 35px;
+                    color: var(--text-color);
+                    opacity: 0.5;
+                }
+                .bottom{
+                    div{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 15px;
+                        p{
+                            color: var(--text-color);
+                        }
+                        span{
+                            color: var(--title-color);
+                        }
+                    }
+                }
+            }
+            .total{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+                margin-top: 10px;
+                p{
+                    color: var(--text-color);
+                }
+                span{
+                    color: var(--button-hover);
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                }
+            }
+            footer{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 30px;
+                .go__add_ons{
+                    color: var(--text-color);
+                    outline: none;
+                    font-size: 16px;
+                    background-color: transparent;
+                    border: transparent;
+                    cursor: pointer;
+                    transition: .5s;
+                    &:hover{
+                        color: var(--title-color);
+                    }
+                }
+                .confirm{
+                    padding: 15px;
+                    background-color: var(--title-color);
+                    outline: none;
+                    border-radius: 5px;
+                    color: var(--white);
+                    border: transparent;
+                    letter-spacing: 2px;
+                    font-weight: 600;
+                    float: right;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: var(--button-hover);
+                    }
+                }
+            }
+        }
     }
 }

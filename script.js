@@ -218,3 +218,27 @@ function updateSettingStyle(setting, isChecked) {
         setting.style.border = "";
     }
 }
+
+// ___________________________________________________________________________
+
+const summary__page = document.querySelector('.summary__page');
+const go_back__to__add_ons = document.querySelector(".go__add_ons");
+const add__ons = document.querySelector(".add__ons");
+const step__four_div = document.querySelector(".step__four_div");
+
+add__ons.addEventListener("click", function (){
+    add__ons__page.style.display = "none";
+    summary__page.style.display = "block";
+    step__three_div.style.background = "";
+    step__three_div.children[0].style.color = "";
+    step__four_div.style.background = "var(--light-blue)";
+    step__four_div.children[0].style.color = "var(--button-hover)";
+})
+go_back__to__add_ons.addEventListener("click", function () {
+    summary__page.style.display = "none";
+    add__ons__page.style.display = "block";
+    step__four_div.style.background = "";
+    step__four_div.children[0].style.color = "";
+    step__three_div.style.background = "var(--light-blue)";
+    step__three_div.children[0].style.color = "var(--button-hover)";
+})
