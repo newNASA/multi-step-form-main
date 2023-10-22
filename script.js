@@ -45,26 +45,26 @@ let check_choice_two = false;
 let check_choice_three = false;
 
 choices_one.addEventListener('click', () => {
-    
+
     choices_one.style.backgroundColor = "var(--magnolia)";
     choices_one.style.borderColor = "var(--button-hover)";
-    
+
     choices_two.style.backgroundColor = "";
     choices_two.style.borderColor = "";
     choices_three.style.backgroundColor = "";
     choices_three.style.borderColor = "";
-    
+
     check_choice_one = true;
     check_choice_three = false;
     check_choice_two = false;
-    
+
 })
 
 choices_two.addEventListener('click', () => {
-    
+
     choices_two.style.backgroundColor = "var(--magnolia)";
     choices_two.style.borderColor = "var(--button-hover)";
-    
+
     choices_one.style.backgroundColor = "";
     choices_one.style.borderColor = "";
     choices_three.style.backgroundColor = "";
@@ -73,23 +73,23 @@ choices_two.addEventListener('click', () => {
     check_choice_one = false;
     check_choice_two = true;
     check_choice_three = false;
-    
+
 })
 
 choices_three.addEventListener('click', () => {
-    
+
     choices_three.style.backgroundColor = "var(--magnolia)";
     choices_three.style.borderColor = "var(--button-hover)";
-    
+
     choices_one.style.backgroundColor = "";
     choices_one.style.borderColor = "";
     choices_two.style.backgroundColor = "";
     choices_two.style.borderColor = "";
-    
+
     check_choice_one = false;
     check_choice_two = false;
     check_choice_three = true;
-    
+
 })
 
 // ___________________________________________________________________
@@ -215,7 +215,7 @@ const step__four_div = document.querySelector(".step__four_div");
 const rate_name = document.querySelector(".rate_name");
 const rate_price = document.querySelector(".rate_price");
 
-add__ons.addEventListener("click", function (){
+add__ons.addEventListener("click", function () {
     add__ons__page.style.display = "none";
     summary__page.style.display = "block";
     step__three_div.style.background = "";
@@ -233,8 +233,8 @@ go_back__to__add_ons.addEventListener("click", function () {
 })
 
 var billing_checker = true;
-let counter = 1;
 monthly.style.color = "var(--title-color)";
+let counter = 1; 
 
 billing.addEventListener('click', () => {
     if (counter % 2 == 1) {
@@ -251,8 +251,18 @@ billing.addEventListener('click', () => {
         online_service_price.textContent = "+$10/yr";
         larger_storage_price.textContent = "+$20/yr";
         custom_pro_price.textContent = "+$20/yr";
+        if (check_choice_one) {
+            rate_name.textContent = "Arcade (yearly)";
+            rate_price.textContent = "$90/yr";
+        } else if (check_choice_two) {
+            rate_name.textContent = "Advanced (yearly)";
+            rate_price.textContent = "$120/yr"
+        } else if (check_choice_three) {
+            rate_name.textContent = "Pro (yearly)"
+            rate_price.textContent = "$150/yr"
+        }
     } else {
-        billing.style.paddingLeft = ""; 
+        billing.style.paddingLeft = "";
         monthly.style.color = "var(--title-color)";
         yearly.style.color = "";
         arcade_price.textContent = "$9/mo";
@@ -266,29 +276,19 @@ billing.addEventListener('click', () => {
         custom_pro_price.textContent = "+$2/mo";
         billing_checker = true;
     }
-    counter += 1; 
+
+    counter += 1;
 });
 
-if (billing_checker == true) {
-    if (check_choice_one){
+if (counter % 2 == 1) {
+    if (check_choice_one) {
         rate_name.textContent = "Arcade (monthly)";
         rate_price.textContent = "$9/mo";
-    }else if (check_choice_two){
+    } else if (check_choice_two) {
         rate_name.textContent = "Advanced (monthly)";
         rate_price.textContent = "$12/mo"
-    }else if(check_choice_three){
+    } else if (check_choice_three) {
         rate_name.textContent = "Pro (monthly)"
         rate_price.textContent = "$15/mo"
-    }
-}else{
-    if (check_choice_one){
-        rate_name.textContent = "Arcade (yearly)";
-        rate_price.textContent = "$90/yr";
-    }else if (check_choice_two){
-        rate_name.textContent = "Advanced (yearly)";
-        rate_price.textContent = "$120/yr"
-    }else if (check_choice_three){
-        rate_name.textContent = "Pro (yearly)"
-        rate_price.textContent = "$150/yr"
     }
 }
