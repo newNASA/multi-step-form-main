@@ -236,59 +236,68 @@ var billing_checker = true;
 monthly.style.color = "var(--title-color)";
 let counter = 1; 
 
+function year_update(){
+    billing.style.paddingLeft = "28px";
+    monthly.style.color = "";
+    yearly.style.color = "var(--title-color)";
+    arcade_price.textContent = "$90/yr";
+    advanced_price.textContent = "$120/yr";
+    pro_price.textContent = "$150/yr";
+    billing_checker = false;
+    checkout.forEach(element => {
+        element.style.display = "block";
+    });
+    online_service_price.textContent = "+$10/yr";
+    larger_storage_price.textContent = "+$20/yr";
+    custom_pro_price.textContent = "+$20/yr";
+    return true;
+}
+
+function month_update(){
+    billing.style.paddingLeft = "";
+    monthly.style.color = "var(--title-color)";
+    yearly.style.color = "";
+    arcade_price.textContent = "$9/mo";
+    advanced_price.textContent = "$12/mo";
+    pro_price.textContent = "$15/mo";
+    checkout.forEach(element => {
+        element.style.display = "";
+    });
+    online_service_price.textContent = "+$1/mo";
+    larger_storage_price.textContent = "+$2/mo";
+    custom_pro_price.textContent = "+$2/mo";
+    billing_checker = true;
+    return true;
+}
 billing.addEventListener('click', () => {
     if (counter % 2 == 1) {
-        billing.style.paddingLeft = "28px";
-        monthly.style.color = "";
-        yearly.style.color = "var(--title-color)";
-        arcade_price.textContent = "$90/yr";
-        advanced_price.textContent = "$120/yr";
-        pro_price.textContent = "$150/yr";
-        billing_checker = false;
-        checkout.forEach(element => {
-            element.style.display = "block";
-        });
-        online_service_price.textContent = "+$10/yr";
-        larger_storage_price.textContent = "+$20/yr";
-        custom_pro_price.textContent = "+$20/yr";
-        if (check_choice_one) {
-            rate_name.textContent = "Arcade (yearly)";
-            rate_price.textContent = "$90/yr";
-        } else if (check_choice_two) {
-            rate_name.textContent = "Advanced (yearly)";
-            rate_price.textContent = "$120/yr"
-        } else if (check_choice_three) {
-            rate_name.textContent = "Pro (yearly)"
-            rate_price.textContent = "$150/yr"
-        }
+        year_update();
     } else {
-        billing.style.paddingLeft = "";
-        monthly.style.color = "var(--title-color)";
-        yearly.style.color = "";
-        arcade_price.textContent = "$9/mo";
-        advanced_price.textContent = "$12/mo";
-        pro_price.textContent = "$15/mo";
-        checkout.forEach(element => {
-            element.style.display = "";
-        });
-        online_service_price.textContent = "+$1/mo";
-        larger_storage_price.textContent = "+$2/mo";
-        custom_pro_price.textContent = "+$2/mo";
-        billing_checker = true;
+        month_update();
     }
-
     counter += 1;
 });
 
-if (counter % 2 == 1) {
+if ( billing_checker == true ) {
     if (check_choice_one) {
         rate_name.textContent = "Arcade (monthly)";
         rate_price.textContent = "$9/mo";
     } else if (check_choice_two) {
-        rate_name.textContent = "Advanced (monthly)";
+        rate_name.innerHTML = "Advanced (monthly)";
         rate_price.textContent = "$12/mo"
     } else if (check_choice_three) {
         rate_name.textContent = "Pro (monthly)"
         rate_price.textContent = "$15/mo"
+    }
+}else{
+    if (check_choice_one) {
+        rate_name.textContent = "Arcade (yearly)";
+        rate_price.textContent = "$90/yr";
+    } else if (check_choice_two) {
+        rate_name.textContent = "Advanced (yearly)";
+        rate_price.textContent = "$120/yr"
+    } else if (check_choice_three) {
+        rate_name.textContent = "Pro (yearly)"
+        rate_price.textContent = "$150/yr"
     }
 }
